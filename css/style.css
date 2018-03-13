@@ -1,0 +1,166 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  color: #fff;
+}
+a, a:hover {
+  color: #fff;
+  text-decoration: none
+}
+#mainHeaderContainer {
+  font-family: 'Futura', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+}
+#fp-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9999;
+}
+#fp-header-contaienr {
+  position: relative;
+  top: 0;
+  height: 56px;
+}
+#fp-header-contaienr::after {
+  content: "";
+   background: #fff;
+   opacity: 0;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   z-index: -1;
+}
+.logo {
+  position: relative;
+  max-width: 300px;
+  top: 0;
+  left: 0;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: 36px;
+  margin-right: 0; */
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  z-index: 100;
+  font-weight: 400;
+}
+.sidebar::after {
+  content: "";
+   background: #000;
+   opacity: 0.2;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   z-index: -1;
+}
+.sidebar-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+ul.menu-wrapper {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  line-height: 22px;
+  font-family: 'Reem Kufi', sans-serif !important;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto; */
+}
+li.menu-item {
+  margin: 6px 0;
+  list-style: none;
+  opacity: 1;
+  z-index: 9998;
+  cursor: pointer;
+}
+.colletion-wrapper {
+  position: absolute;
+  top: 46%;
+  left: 36px;
+}
+.social-wrapper {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  /* background: gold; */
+
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1200px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.bg-img {
+  min-width: 100vw;
+  height: 100vh;
+  background: url("../img/bg_w1200.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -9999;
+}
+.show-md {
+  display: none;
+}
+.hide-md {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .show-md {
+    display: block;
+  }
+  .hide-md {
+    display: none;
+  }
+  .logo {
+    margin-left: 36px;
+    margin-right: 0;
+  }
+  .logo.test {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1200px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -600px;   /* 50% */
+  }
+}
