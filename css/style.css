@@ -62,7 +62,9 @@ main {
 */
 
 /* Global Navigation Bar */
-
+.text-white {
+  color: #fff;
+}
 .show-md {
   display: none;
 }
